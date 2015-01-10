@@ -15,6 +15,9 @@ gem 'decent_exposure'
 gem 'formtastic'
 
 gem 'spring',        group: :development
-
-gem 'rails_12factor', group: :production
 gem 'foreman'
+
+group :production do
+  gem 'rails_12factor'
+  gem 'unicorn'
+end
