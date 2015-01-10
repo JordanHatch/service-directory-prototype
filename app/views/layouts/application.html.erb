@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Services</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header>
+    <h1><%= link_to "Service directory", services_path %></h1>
+  </header>
+
+  <% if flash.any? %>
+    <% flash.each do |key, message| %>
+    <div class="notice notice-<%= key %>">
+      <%= message %>
+    </div>
+    <% end %>
+  <% end %>
+
+  <main>
+    <%= yield %>
+  </main>
+
+</body>
+</html>

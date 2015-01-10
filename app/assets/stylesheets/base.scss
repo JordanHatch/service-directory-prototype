@@ -1,0 +1,56 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  @include font-stack;
+
+  background: #fff;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+header {
+  background: #000;
+  color: #fff;
+  height: 50px;
+  margin-bottom: 10px;
+
+  h1 {
+    font-size: 18px;
+    padding: 12px 15px;
+    margin: 0;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 31px;
+  margin: 15px 0;
+}
+h2 {
+  font-weight: 500;
+  font-size: 23px;
+  margin: 15px 0;
+}
+
+main {
+  margin: 0 15px;
+}
+
+a, a:link, a:visited {
+  color: #4472a7;
+  text-decoration: underline;
+}

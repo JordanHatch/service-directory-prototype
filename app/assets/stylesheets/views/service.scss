@@ -1,0 +1,79 @@
+section.group {
+  width: 49%;
+  padding: 15px;
+  border: 1px solid #bbb;
+  background: #fafafa;
+  float: left;
+  margin: 0 0 25px 1%;
+  min-height: 150px;
+  overflow: auto;
+
+  &:nth-of-type(odd) {
+    clear: left;
+    margin-right: 1%;
+    margin-left: 0;
+  }
+
+  h1 {
+    font-size: 15px;
+    margin: 0 0 10px;
+    color: #555;
+    text-transform: uppercase;
+  }
+
+  ul {
+    margin: 10px 0;
+
+    &.primary {
+      li {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .item {
+    border: 1px solid #bbb;
+    padding: 4px 7px;
+    display: list-item;
+    background:#fff;
+    font-size: 15px;
+    margin-bottom: 3px;
+
+    .edit {
+      float: right;
+      font-size: 11px;
+
+      a {
+        color: #666;
+        text-decoration: none;
+        font-weight: normal;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  ol {
+    list-style: decimal inside;
+  }
+
+  .add {
+    font-size: 13px;
+    display: inline-block;
+    margin: 10px 0 0;
+    color: #555;
+    float: right;
+  }
+}
+
+em.group {
+  font-weight: bold;
+}
+
+section.delete-item {
+  margin-top: 20px;
+  border-top: 1px solid #bbb;
+  padding-top: 0;
+}

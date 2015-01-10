@@ -1,0 +1,19 @@
+ul.services-list {
+  margin-bottom: 20px;
+  
+  li {
+    margin: 0 0 8px;
+    a {
+      display: block;
+      padding: 8px 12px;
+      background: #eee;
+      font-size: 23px;
+      color: #000;
+      text-decoration: none;
+
+      &:hover {
+        background: #ddd;
+      }
+    }
+  }
+}

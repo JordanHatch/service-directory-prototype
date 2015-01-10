@@ -1,0 +1,10 @@
+<h1><%= service.name %>
+<h2><em class="group"><%= t("groups.#{group.id}") %>:</em> edit item</h2>
+
+<%= render partial: 'form', locals: { item: item } %>
+
+<section class="delete-item">
+  <%= button_to 'Delete', service_item_path(service, item), method: 'delete',
+                                                            confirm: 'Are you sure?',
+                                                            class: 'button delete' %>
+</section>

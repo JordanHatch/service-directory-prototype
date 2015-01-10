@@ -1,0 +1,7 @@
+<ul class="services-list">
+  <% services.each do |service| %>
+    <li><%= link_to service.name, service_path(service) %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add a new service', new_service_path %>

@@ -1,0 +1,19 @@
+<section class="group group-<%= group.id %>">
+  <h1><%= t("groups.#{group.id}") %></h1>
+
+  <% if (items = service.items.for_group(group.id)) %>
+    <% if group.has_primary? %>
+      <ul class="primary">
+        <%= render partial: 'item', locals: { item: items.primary.first } %>
+      </ul>
+    <% end %>
+
+    <% if group.has_order? %>
+      <%= render partial: 'ordered_item_list', locals: { items: items.not_primary } %>
+    <% else %>
+      <%= render partial: 'item_list', locals: { items: items.not_primary } %>
+    <% end %>
+  <% end %>
+
+  <%= link_to 'Add item', new_service_item_path(service, group: group), class: 'add' %>
+</section>

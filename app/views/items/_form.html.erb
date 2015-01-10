@@ -1,0 +1,16 @@
+<%= semantic_form_for [service, item] do |f| %>
+
+  <%= f.input :name %>
+  <%= f.input :order %>
+  <%= f.hidden_field :group %>
+
+  <% if item.group_instance.has_primary? %>
+    <%= f.input :primary, label: 'Is this the first step?' %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, as: :button %>
+    <%= link_to 'go back', service_path(service) %>
+  <% end %>
+
+<% end %>

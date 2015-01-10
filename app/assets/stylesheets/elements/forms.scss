@@ -1,0 +1,80 @@
+@import 'formtastic';
+
+@mixin base-input-style {
+  @include font-stack;
+  font-size: 18px;
+  padding: 8px 8px 7px;
+  border: 2px solid #666;
+}
+@mixin base-button-style {
+  @include font-stack;
+
+  background: #00823b;
+  padding: 9px 20px;
+  font-weight: normal;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+
+  &:hover {
+    background: #149f4e;
+  }
+}
+
+form {
+  margin-top: 18px;
+}
+
+.formtastic .button_action button {
+  @include base-button-style;
+}
+
+.button {
+  @include base-button-style;
+
+  &.delete {
+    background: #a31313;
+  }
+}
+
+.formtastic {
+  .actions, .inline-errors {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .input {
+    list-style: none;
+
+    .label, input {
+      float: none;
+      display: block;
+      width: 100%;
+    }
+
+    input {
+      @include base-input-style;
+    }
+
+    .label {
+      margin: 0 0 2px;
+    }
+
+    &.error {
+      input {
+        border-color: #c73535;
+      }
+    }
+
+    &.boolean {
+      input {
+        width: auto;
+        display: inline;
+      }
+      label {
+        padding-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+<h1><%= service.name %>
+<h2><em class="group"><%= t("groups.#{group.id}") %>:</em> new item</h2>
+
+<%= render partial: 'form', locals: { item: item } %>
