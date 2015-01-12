@@ -2,7 +2,7 @@
   <h1><%= t("groups.#{group.id}") %></h1>
 
   <% if (items = service.items.for_group(group.id)) %>
-    <% if group.has_primary? %>
+    <% if group.has_primary? && items.primary.any? %>
       <ul class="primary">
         <%= render partial: 'item', locals: { item: items.primary.first } %>
       </ul>
