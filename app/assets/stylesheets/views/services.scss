@@ -1,6 +1,6 @@
 ul.services-list {
   margin-bottom: 20px;
-  
+
   li {
     margin: 0 0 8px;
     a {
@@ -15,5 +15,16 @@ ul.services-list {
         background: #ddd;
       }
     }
+  }
+}
+
+.service-actions {
+  float: right;
+  margin-top: -50px;
+
+  a {
+    @extend .button;
+    font-size: 14px;
+    padding: 8px 15px;
   }
 }

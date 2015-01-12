@@ -1,3 +1,7 @@
 <h1><%= service.name %></h1>
 
+<div class="service-actions">
+  <%= link_to 'Edit service', edit_service_path(service) %>
+</div>
+
 <%= render partial: 'group', collection: groups  %>

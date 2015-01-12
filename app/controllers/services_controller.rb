@@ -13,6 +13,18 @@ class ServicesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if service.update_attributes(service_params)
+      flash.notice = 'Service saved'
+      redirect_to service_path(service)
+    else
+      render action: :edit
+    end
+  end
+
 private
   def groups
     Group.all
