@@ -16,6 +16,7 @@
   color: #fff;
   font-size: 18px;
   cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     background: #149f4e;
@@ -47,13 +48,16 @@ form {
   .input {
     list-style: none;
 
-    .label, input {
+    .label, input, textarea {
       float: none;
       display: block;
       width: 100%;
     }
 
     input {
+      @include base-input-style;
+    }
+    textarea {
       @include base-input-style;
     }
 
