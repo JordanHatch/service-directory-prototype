@@ -4,4 +4,12 @@
   <%= link_to 'Edit service', edit_service_path(service) %>
 </div>
 
+<div class="overview">
+  <% if service.overview.present? %>
+    <%= simple_format service.overview %>
+  <% else %>
+    <p class="no-overview">No overview for this service yet.</p>
+  <% end %>
+</div>
+
 <%= render partial: 'group', collection: groups  %>

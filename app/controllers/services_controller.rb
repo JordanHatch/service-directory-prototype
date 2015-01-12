@@ -32,6 +32,6 @@ private
   helper_method :groups
 
   def service_params
-    params.require(:service).permit(:name)
+    params.require(:service).permit(:name, :overview)
   end
 end

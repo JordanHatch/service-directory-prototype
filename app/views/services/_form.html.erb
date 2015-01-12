@@ -1,5 +1,6 @@
 <%= semantic_form_for service do |f| %>
   <%= f.input :name %>
+  <%= f.input :overview, input_html: { rows: 3 } %>
 
   <%= f.actions do %>
     <%= f.action :submit, as: :button %>
