@@ -39,6 +39,23 @@ section.group {
     font-size: 15px;
     margin-bottom: 3px;
 
+    .item-label {
+      font-size: 12px;
+      padding: 1px 4px;
+      vertical-align: top;
+      margin-left: 5px;
+      display: inline-block;
+
+      &.provider {
+        border: 1px solid #000000;
+      }
+      &.location {
+        color: #fff;
+        background: #138fa7;
+        border: 1px solid #138fa7;
+      }
+    }
+
     .edit {
       float: right;
       font-size: 11px;

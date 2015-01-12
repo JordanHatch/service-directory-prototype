@@ -1,4 +1,12 @@
 <li class="item">
   <%= item.name %>
+
+  <% if item.provider.present? %>
+    <span class="item-label provider"><%= predefined_list_label(:provider, item.provider) %></span>
+  <% end %>
+  <% if item.location.present? %>
+    <span class="item-label location"><%= predefined_list_label(:location, item.location) %></span>
+  <% end %>
+
   <span class="edit"><%= link_to 'edit', edit_service_item_path(service, item) %></span>
 </li>

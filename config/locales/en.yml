@@ -25,6 +25,17 @@ en:
     start: 'Start'
     change: 'Change or stop'
     help: 'Help'
+  providers:
+    government: 'Government'
+    local-authority: 'Local authority'
+    supplier: 'A supplier'
+    independent-body: 'An independent body'
+    employer: "The user's employer"
+    not-provided: 'Not provided'
+  locations:
+    on-gov-uk: 'On GOV.UK'
+    online: 'Elsewhere online'
+    offline: 'Offline'
   formtastic:
     actions:
       create: 'Create'

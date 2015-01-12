@@ -51,6 +51,14 @@ private
   helper_method :group
 
   def item_params
-    params.require(:item).permit(:name, :group, :parent_id, :primary, :order)
+    params.require(:item).permit(
+      :group,
+      :location,
+      :name,
+      :order,
+      :parent_id,
+      :primary,
+      :provider,
+    )
   end
 end

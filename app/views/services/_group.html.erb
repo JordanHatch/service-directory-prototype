@@ -4,14 +4,14 @@
   <% if (items = service.items.for_group(group.id)) %>
     <% if group.has_primary? && items.primary.any? %>
       <ul class="primary">
-        <%= render partial: 'item', locals: { item: items.primary.first } %>
+        <%= render partial: 'item', collection: items.primary %>
       </ul>
     <% end %>
 
     <% if group.has_order? %>
-      <%= render partial: 'ordered_item_list', locals: { items: items.not_primary } %>
+      <%= render partial: 'ordered_item_list', locals: { items: items.not_primary.in_step_order } %>
     <% else %>
-      <%= render partial: 'item_list', locals: { items: items.not_primary } %>
+      <%= render partial: 'item_list', locals: { items: items.not_primary.in_step_order } %>
     <% end %>
   <% end %>
 

@@ -4,6 +4,11 @@
   <%= f.input :order %>
   <%= f.hidden_field :group %>
 
+  <%= f.input :provider, label: 'Who provides this step?',
+                         collection: predefined_list_with_labels(:providers) %>
+  <%= f.input :location, label: 'Where does this step take place?',
+                         collection: predefined_list_with_labels(:locations) %>
+
   <% if item.group_instance.has_primary? %>
     <%= f.input :primary, label: 'Is this the first step?' %>
   <% end %>
